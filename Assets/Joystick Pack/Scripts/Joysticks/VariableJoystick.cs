@@ -33,6 +33,7 @@ public class VariableJoystick : Joystick
 
     public override void OnPointerDown(PointerEventData eventData)
     {
+        Debug.Log("Pointer down");
         if(joystickType != JoystickType.Fixed)
         {
             background.anchoredPosition = ScreenPointToAnchoredPosition(eventData.position);
@@ -43,6 +44,7 @@ public class VariableJoystick : Joystick
 
     public override void OnPointerUp(PointerEventData eventData)
     {
+        Debug.Log("Pointer up");
         if(joystickType != JoystickType.Fixed)
             background.gameObject.SetActive(false);
 
